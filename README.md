@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+<!-- PieOrbit -->
+# PieOrbit Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+PieOrbit is a scalable, reusable, and maintainable React.js application designed to display a list of items with features like **Search**, **Sort**, **Filter**, **Pagination**, and more. The project is optimized for performance and built using **React Context API** for state management along with **Tailwind CSS** for responsive design.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **Features**
+1. **SearchBar**
+   - Search items by name with debounce for performance optimization.
 
-### `npm start`
+2. **SortOptions**
+   - Sort items by name (A-Z, Z-A) or price (low-to-high, high-to-low).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **Filter**
+   - Filter items by category and price range.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. **Table**
+   - Display the list of items in a structured and responsive table format.
 
-### `npm test`
+5. **Pagination**
+   - Navigate through the items using pagination for better performance.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## **Technology Stack**
+- **Frontend Framework:** React.js
+- **Styling:** Tailwind CSS
+- **State Management:** React Context API
+- **Language:** JavaScript
+- **Utilities:**
+  - Debounce for performance optimization
+  - Custom hooks for reusability and cleaner code
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## **Project Quality**
+- Built in a **scalable** fashion with modular components.
+- Designed for **reusability** and **maintainability**.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## **Performance Optimizations**
+1. **Debounce in Search:**
+   - Ensures that search input triggers fewer state updates, improving performance.
+2. **Pagination:**
+   - Only renders the required items per page, reducing rendering overhead.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## **Folder Structure**
+src/ │ ├── components/ │ ├── Filters.js // Filter component │ ├── Pagination.js // Pagination component │ ├── SearchBar.js // Search bar component │ ├── SortOptions.js // Sort options dropdown │ └── Table.js // Table to display items │ ├── constants/ │ └── data.json // Sample data for items │ ├── context/ │ └── ItemContext.js // Context API for global state management │ ├── hooks/ │ └── useDebounce.js // Custom hook for debounce functionality │ ├── styles/ │ └── tailwind.css // Tailwind CSS configuration │ ├── App.js // Main application file └── index.js //
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## **Setup Instructions**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/anandgithub125/PieOrbit.git
+   cd pieorbit
+   npm install
+   npm start
 
-## Learn More
+   Usage
+Search: Use the search bar to find items by name.
+Sort: Select a sorting option to organize items by name or price.
+Filter: Apply filters to view items by category or within a specific price range.
+Pagination: Navigate between pages to view more items.
+Explanation of Approach
+State Management:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Used React Context API to manage global state efficiently for filters, search term, sort options, and pagination.
+Centralized the logic in a single context to avoid prop drilling.
+Modular Design:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Divided the application into smaller, reusable components (SearchBar, SortOptions, Filters, Table, Pagination).
+Reusable Utilities:
 
-### Code Splitting
+Created a custom useDebounce hook to improve performance in the search feature.
+Scalable Codebase:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Followed a clear folder structure to separate concerns and ensure the codebase can grow with additional features.
+Styling:
 
-### Analyzing the Bundle Size
+Used Tailwind CSS for rapid UI development and responsiveness.
+Performance:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Implemented debounce to minimize unnecessary state updates during search.
+Added pagination to ensure only required items are rendered, optimizing performance for large datasets.
