@@ -2,7 +2,7 @@
 # PieOrbit Project
 
 ## Overview
-PieOrbit is a scalable, reusable, and maintainable React.js application designed to display a list of items with features like **Search**, **Sort**, **Filter**, **Pagination**, and more. The project is optimized for performance and built using **React Context API** for state management along with **Tailwind CSS** for responsive design.
+PieOrbit is a scalable, reusable, and maintainable React.js application designed to display a list of items with features like **Search**, **Sort**, **Filter**, **Pagination**, and more. The project is optimized for performance and built using **React Context API** for state management along with ** CSS** for responsive design and large scalable fashion .
 
 ---
 
@@ -26,9 +26,10 @@ PieOrbit is a scalable, reusable, and maintainable React.js application designed
 
 ## **Technology Stack**
 - **Frontend Framework:** React.js
-- **Styling:** Tailwind CSS
+- **Styling:** CSS
 - **State Management:** React Context API
 - **Language:** JavaScript
+- **Markup Language:** HTML
 - **Utilities:**
   - Debounce for performance optimization
   - Custom hooks for reusability and cleaner code
@@ -50,7 +51,7 @@ PieOrbit is a scalable, reusable, and maintainable React.js application designed
 ---
 
 ## **Folder Structure**
-src/ │ ├── components/ │ ├── Filters.js // Filter component │ ├── Pagination.js // Pagination component │ ├── SearchBar.js // Search bar component │ ├── SortOptions.js // Sort options dropdown │ └── Table.js // Table to display items │ ├── constants/ │ └── data.json // Sample data for items │ ├── context/ │ └── ItemContext.js // Context API for global state management │ ├── hooks/ │ └── useDebounce.js // Custom hook for debounce functionality │ ├── styles/ │ └── tailwind.css // Tailwind CSS configuration │ ├── App.js // Main application file └── index.js //
+src/ │ ├── components/ │ ├── Filters.js // Filter component │ ├── Pagination.js // Pagination component │ ├── SearchBar.js // Search bar component │ ├── SortOptions.js // Sort options dropdown │ └── Table.js // Table to display items │ ├── constants/ │ └── data.json // Sample data for items │ ├── context/ │ └── ItemContext.js // Context API for global state management │ ├── hooks/ │ └── useDebounce.js // Custom hook for debounce functionality │ ├── styles/ │  ├── App.js // Main application file └── index.js //
 
 ## **Setup Instructions**
 

@@ -10,16 +10,29 @@ const SortOptions = () => {
         { label: "Price (Low to High)", value: "priceAsc" },
         { label: "Price (High to Low)", value: "priceDesc" },
       ];
+
+      const sortStyles = {
+        container: {
+          marginBottom: '20px', 
+        },
+        select: {
+          border: '1px solid #d1d5db',
+          borderRadius: '4px', 
+          padding: '8px 16px', 
+          fontSize: '16px',
+          cursor: 'pointer',
+        },
+      };
    const { setSortOption } = useContext(ItemContext);
 
    const handleSortChange = (e) => {
     setSortOption(e.target.value);
   };
   return (
-    <div className="mb-5">
+    <div style={sortStyles.container}>
       <select
         onChange={handleSortChange}
-        className="border rounded px-4 py-2"
+        style={sortStyles.select}
       >{sortOptions.map((option, index) => (
         <option key={index} value={option.value}>
           {option.label}

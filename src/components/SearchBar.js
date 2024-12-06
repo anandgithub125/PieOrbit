@@ -11,15 +11,28 @@ const SearchBar = () => {
       setSearchTerm(debouncedSearchInput);
     }, [debouncedSearchInput, setSearchTerm]);
   
+    const searchStyles = {
+      container: {
+        marginBottom: '20px', 
+      },
+      input: {
+        width: '100%', 
+        border: '1px solid #d1d5db', 
+        borderRadius: '4px', 
+        padding: '8px 16px', 
+        fontSize: '16px',
+        outline: 'none',
+      },
+    };
 
   return (
-    <div className="mb-5">
+    <div style={searchStyles.container}>
       <input
         type="text"
         placeholder="Search by name..."
         value={searchInput}
         onChange={(e) => setSearchInput(e.target.value)}
-        className="w-full border rounded px-4 py-2"
+        style={searchStyles.input}
       />
     </div>
   );

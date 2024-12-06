@@ -7,8 +7,8 @@ import Table from "./components/Table";
 
 const App = () => (
   <ItemProvider>
-    <div className="container mx-auto p-5">
-      <h1 className="text-2xl text-center font-bold mb-5">PieOrbit Item List</h1>
+  <div style={appStyles.container}>
+  <h1 style={appStyles.heading}>PieOrbit Item List</h1>
       <SearchBar />
       <Filters />
       <SortOptions />
@@ -16,5 +16,20 @@ const App = () => (
     </div>
   </ItemProvider>
 );
+
+const appStyles = {
+  container: {
+    maxWidth: '1200px', 
+    margin: '0 auto', 
+    padding: '20px',
+  },
+  heading: {
+    fontSize: '24px', 
+    textAlign: 'center',
+    fontWeight: 'bold', 
+    marginBottom: '20px', 
+  },
+};
+
 
 export default App;

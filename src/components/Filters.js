@@ -14,6 +14,22 @@ const Filters = () => {
     { label: "Above $100", value: "100-300" },
   ];
 
+  const filterStyles = {
+    container: {
+      marginBottom: '20px', 
+      display: 'flex', 
+      gap: '16px', 
+    },
+    select: {
+      border: '1px solid #d1d5db', 
+      borderRadius: '4px', 
+      padding: '8px 16px', 
+      fontSize: '16px',
+      width: 'auto',
+      cursor: 'pointer',
+    },
+  };
+
   const { filters, setFilters } = useContext(ItemContext);
   const [selectedCategory, setSelectedCategory] = useState(filters.category);
   const [priceRange, setPriceRange] = useState(filters.priceRange);
@@ -30,11 +46,11 @@ const Filters = () => {
   };
 
   return (
-    <div className="mb-5 flex gap-4">
+    <div style={filterStyles.container}>
       <select 
        value={selectedCategory}
        onChange={handleCategoryChange}
-      className="border rounded px-4 py-2">
+       style={filterStyles.select}>
         {categoiesOptions.map((item, index) => (
           <option key={index} value={item.value}>
             {item.label}
@@ -45,7 +61,7 @@ const Filters = () => {
       <select 
        value={priceRange.join("-")}
        onChange={handlePriceRangeChange}
-      className="border rounded px-4 py-2">
+       style={filterStyles.select}>
         {pricesOptions.map((item, index) => (
           <option key={index} value={item.value}>
             {item.label}
